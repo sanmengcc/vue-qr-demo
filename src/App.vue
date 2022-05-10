@@ -7,11 +7,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import ptable from "@/components/ptable";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    ptable
   }
 }
 </script>
