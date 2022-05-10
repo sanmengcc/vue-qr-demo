@@ -2,6 +2,7 @@
 
     <div class="hello">
       <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <h1>Login</h1>
         <el-form-item label="账号" prop="username">
           <el-input v-model.number="ruleForm.username"></el-input>
         </el-form-item>
@@ -62,9 +63,12 @@ export default {
           }
         }).then(function (response) {
           if (response.data.code === 1) {
-            alert(response.data.data.dispaly_name)
+            // alert(response.data.data.dispaly_name)
+            let that;
+            that.$router.push({name:'ptable'});
           } else {
-            alert(response.data.msg)
+            // alert(response.data.msg)
+            alert('登陆失败')
           }
         }).catch(function (error) {
           console.log(error.message)
@@ -83,7 +87,7 @@ export default {
 .hello{
   width: 400px;
   height: 500px;
-  margin: 160px 400px;
+  margin: 160px 380px;
 }
 .loginbtn{
   width: 130px;

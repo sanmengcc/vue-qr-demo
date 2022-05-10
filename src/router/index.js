@@ -11,18 +11,16 @@ Vue.use(Router)
 export default new Router({
     routes: [
         {
-            // 访问根目录时显示login组件内容
+            // 访问根目录时显示ptable组件内容组件内容
             path: '/',
-            name:'Login',
-            component: Login,
-
+            name:'ptable',
+            component: ptable,
         },
         {
-            // 访问根目录时显示ptable组件内容
-            path: '/ptable',
-            component: ptable,
-
+            // 访问根目录时显示login组件内容
+            path: '/login',
+            name:'Login',
+            component: Login,
         },
-
     ]
 })
