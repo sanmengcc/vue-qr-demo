@@ -7,7 +7,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 import axios from 'axios'
-
+import Login from "@/components/Login";
+import Index from "@/components/Index";
 Vue.prototype.$axios = axios
 //使用ElementUI
 Vue.use(ElementUI)
@@ -20,6 +21,7 @@ Vue.use(ElementUI)
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: { App ,Login,Index},
   template: '<App/>'
+
 })

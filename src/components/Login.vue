@@ -10,7 +10,7 @@
           <el-input type="password" v-model="ruleForm.password" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm')" class="loginbtn">登录</el-button>
+          <el-button type="primary" @click="submitForm('ruleForm')" class="loginbtn" onclick="location.href='Index.vue#/Index'">登录</el-button>
 <!--          <el-button @click="resetForm('ruleForm')">重置</el-button>-->
         </el-form-item>
       </el-form>
@@ -20,6 +20,7 @@
 //这是个登录页
 <script>
 import axios from 'axios'
+
 export default {
   name:'Login',
   data () {
@@ -65,7 +66,7 @@ export default {
           if (response.data.code === 1) {
             // alert(response.data.data.dispaly_name)
             let that;
-            that.$router.push({name:'ptable'});
+            that.$router.push({name:'Index'});
           } else {
             // alert(response.data.msg)
             alert('登陆失败')
